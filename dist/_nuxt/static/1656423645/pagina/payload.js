@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/pagina", {data:[{}],fetch:{},mutations:void 0});

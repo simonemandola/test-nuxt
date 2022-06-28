@@ -1,15 +1,12 @@
 {
-  "name": "test-nuxt-ssr",
+  "name": "test-ssr",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint:prettier": "prettier --check .",
-    "lint": "npm run lint:prettier",
-    "lintfix": "prettier --write --list-different ."
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "core-js": "^3.19.3",
@@ -19,8 +16,5 @@
     "vue-template-compiler": "^2.6.14",
     "webpack": "^4.46.0"
   },
-  "devDependencies": {
-    "eslint-config-prettier": "^8.3.0",
-    "prettier": "^2.5.1"
-  }
+  "devDependencies": {}
 }
