@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Post desde JSON placeholder</h1>
-    <router-link :to="{ name: 'index' }">Atrás</router-link>
+    <NuxtLink :to="{ name: 'index' }">Atrás</NuxtLink>
     <ul>
       <li v-for="(post, i) in allPost" :key="i">
         <strong>{{ post.title }}</strong>
