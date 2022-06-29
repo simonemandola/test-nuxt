@@ -3,12 +3,19 @@
     <h1>Post desde JSON placeholder</h1>
     <NuxtLink :to="{ name: 'index' }">Atrás</NuxtLink>
     <ul>
-      <li v-for="(post, i) in allPost" :key="i">
+      <li v-for="(post, i) in posts" :key="i">
         <strong>{{ post.title }}</strong>
       </li>
     </ul>
   </div>
 </template>
+
+
+<script setup>
+
+
+
+</script>
 
 <script>
 export default {
@@ -28,25 +35,10 @@ export default {
       }
     }
   },
-  data() {
-    return {
-      myPosts: {},
-    }
+  async asyncData({ $axios }) {
+    const posts = await $axios.$get('https://jsonplaceholder.typicode.com/posts')
+    return { posts }
   },
-  computed: {
-    allPost() {
-      return this.myPosts;
-    }
-  },
-  methods: {
-    async getPost() {
-      const data = await fetch("https://jsonplaceholder.typicode.com/posts");
-      this.myPosts = await data.json();
-    }
-  },
-  mounted() {
-    this.getPost();
-  }
 }
 </script>
 
